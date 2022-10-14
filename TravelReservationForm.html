@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ReservationForm</title>
+</head>
+
+<body>
+    <h1>Travel Reservation Form</h1>
+    <h3>*denotes mandatory</h3>
+    <form name="regForm" method="get" action="success.html">
+
+
+        <strong>Full Name<sup>*</sup>:</strong><br>
+        <input type="text" name="fullname" /><br>
+        <strong>Email address: <sup>*</sup>:</strong><br>
+        <input type="email" name="email" /><br>
+        <strong>Select Tour package<sup>*</sup>:</strong><br>
+        <select name="tour">
+            <option value="goa">Goa</option>
+            <option value="mysore">Mysore</option>
+        </select></br>
+        <strong>Arrival Date<sup>*</sup>:</strong><br>
+        <input type="date" name="date" value="m/d/y" /><br>
+        <strong>Number of persons<sup>*</sup>:</strong><br>
+        <input type="textbox" name="person" value="unkown_type" /><br>
+        <strong>What would you want to avail?<sup>*</sup>:</strong><br>
+        <input type="checkbox" name="want" value="boarding" />Boarding<br>
+        <input type="checkbox" name="want" value="fooding" />Fooding<br>
+        <input type="checkbox" name="want" value="sightseeing" />Sight seing<br>
+        <strong>Discount Coupon Code<sup>*</sup>:</strong><br>
+        <input type="textbox" name="couponcode" value="unkown_type" /><br>
+        <strong>Terms and Condition<sup>*</sup>:</strong><br>
+        <input type="radio" name="termandcondition" value="I agree" />I Agree
+        <input type="radio" name="termandcondition" value="I disagree" />I disagree<br>
+        <input type="Submit" value="Complete Reservation">
+    </form>
+</body>
+
+</html>

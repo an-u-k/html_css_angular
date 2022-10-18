@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport">
+        <title>
+            Display info
+        </title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <script type="text/javascript">
+            function displayData(){
+                document.getElementById("name").innerHTML=localStorage.getItem("txtNameLocal");
+                document.getElementById("address").innerHTML=localStorage.getItem("txtAddressLocal");
+                document.getElementById("zipcode").innerHTML=localStorage.getItem("txtZipLocal");
+                document.getElementById("country").innerHTML=localStorage.getItem("txtCountryLocal");
+                document.getElementById("gender").innerHTML=localStorage.getItem("txtGenderLocal");
+                document.getElementById("preferences").innerHTML=localStorage.getItem("txtPreLocal");
+                document.getElementById("phone").innerHTML=localStorage.getItem("txtPhoneLocal");
+                document.getElementById("mail").innerHTML=localStorage.getItem("txtMailLocal");
+                document.getElementById("password").innerHTML=localStorage.getItem("txtPassLocal");
+                document.getElementById("verpassword").innerHTML=localStorage.getItem("txtVerLocal");
+                document.getElementById("birthday").innerHTML=localStorage.getItem("txtBdayLocal");
+                document.getElementById("appoinment").innerHTML=localStorage.getItem("txtAppLocal");
+            }
+        </script>
+    </head>
+    <body onload="displayData()">
+        <div class="container">
+            <div class="form-group mx-auto">
+                <h2>Registered information</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            Name:
+                        </td>
+                        <td>
+                            <span id="name"></span></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Address:
+                        </td>
+                        <td>
+                            <span id="address"></span></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ZipCode:
+                        </td>
+                        <td>
+                            <span id="zipcode"></span></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Country:
+                        </td>
+                        <td>
+                            <span id="country"></span></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Gender:
+                        </td>
+                        <td>
+                            <span id="gender"></span></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Preferences:
+                        </td>
+                        <td>
+                            <span id="preferences"></span></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Phone:
+                        </td>
+                        <td>
+                            <span id="phone"></span></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mail:
+                        </td>
+                        <td>
+                            <span id="mail"></span></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Password:
+                        </td>
+                        <td>
+                            <span id="password"></span></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Birthday:
+                        </td>
+                        <td>
+                            <span id="birthday"></span></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Appoinment:
+                        </td>
+                        <td>
+                            <span id="appoinment"></span></b>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

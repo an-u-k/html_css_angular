@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+
+    <style>
+        .required {
+            color: red;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function getData() {
+
+            var name = document.getElementById("txtName").value;
+            var address=document.getElementById("txtaddress").value;
+            var zipcode=document.getElementById("txtzip").value;
+            var country=document.getElementById("txtcountry").value;
+            var gender=document.getElementById("txtgender").value;
+            var preferences=document.getElementById("What").value;
+            var phone=document.getElementById("txtphone").value;
+            var mail=document.getElementById("txtmail").value;
+            var password=document.getElementById("txtpassword").value;
+            var verpassword=document.getElementById("txtver").value;
+            var birthday=document.getElementById("txtbirthday").value;
+            var appoinment=document.getElementById("txtapp").value;
+
+            localStorage.setItem("txtNameLocal", name);
+            localStorage.setItem("txtAddressLocal", address);
+            localStorage.setItem("txtZipLocal", zipcode);
+            localStorage.setItem("txtCountryLocal", country);
+            localStorage.setItem("txtGenderLocal", gender);
+            localStorage.setItem("txtPreLocal", preferences);
+            localStorage.setItem("txtPhoneLocal", phone);
+            localStorage.setItem("txtMailLocal", mail);
+            localStorage.setItem("txtPassLocal", password);
+            localStorage.setItem("txtVerLocal", verpassword);
+            localStorage.setItem("txtBdayLocal", birthday);
+            localStorage.setItem("txtAppLocal", appoinment);
+
+            sessionStorage.setItem("txtNameSession", name);
+            sessionStorage.setItem("txtAddressSession", address);
+            sessionStorage.setItem("txtZipSession", zipCode);
+            sessionStorage.setItem("txtCountrySession", country);
+            sessionStorage.setItem("txtGenderSession", gender);
+            sessionStorage.setItem("txtPreSession", preferences);
+            sessionStorage.setItem("txtPhoneSession", phone);
+            sessionStorage.setItem("txtMailSession", mail);
+            sessionStorage.setItem("txtPassSession", password);
+            sessionStorage.setItem("txtVerSession", verpassword);
+            sessionStorage.setItem("txtBdaySession", birthday);
+            sessionStorage.setItem("txtAppSession", appoinment);
+
+        }
+
+    </script>
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group mx-auto">
+            <h2>Personal details</h2>
+            <!-- entry form -->
+            <form id="formTest" method="get" action="report.html">
+
+                <table>
+                    <tr>
+                        <td>
+                            <label for="txtName">Name:<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtName" name="name" required placeholder="Enter Name"
+                                class="form-control" autocomplete="off" pattern="[A-Za-z0-9]+">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtaddress">
+                                Address:
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtaddress" name="txtaddress" required 
+                                class="form-control" pattern="[A-Za-z0-9]+">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtzip">
+                                ZipCode<span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtzip" name="txtzip" required placeholder="Enter zipcode"
+                                class="form-control" pattern="^\d{5}$"
+                                oninvalid="this.setCustomValidity('Enter a 5 digit zipcode')"
+                                oninput="this.setCustomValidity('')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtcountry">
+                                Country<span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <select name="txtcountry" id="txtcountry">
+                                <option value="">Please select</option>
+                                <option value="canada">Canada</option>
+                                <option value="india">India</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for name="txtgender">Gender:<span class="required">*</span></label>
+                        </td>
+                        <td>
+                         
+                
+                <input id="txtgender" type="radio" value="female" />Female</input>
+                <br><input id="txtgender" type="radio" value="male" />Male</input>
+            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="What">
+                                Preferences:<span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input id="What" type="checkbox" value="red" />Red</input><br>
+                <input id="What" type="checkbox" value="green" checked />Green</input><br>
+                <input id="What" type="checkbox" value="blue" />Blue</input><br>
+               
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtphone">
+                                Phone<span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtphone" name="txtphone" required
+                                class="form-control" pattern="^\d{10}$"
+                                oninvalid="this.setCustomValidity('Enter a valid phone number')"
+                                oninput="this.setCustomValidity('')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtmail">
+                                email<span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="email" id="txtmail" name="txtmail" 
+                                class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtpassword">
+                                Password<span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="password" id="txtpassword" name="txtpassword" required placeholder="6-8 charachters"
+                                class="form-control" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{6-8})$"
+                                oninvalid="this.setCustomValidity('Enter a 6-8 characters')"
+                                oninput="this.setCustomValidity('')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtver">
+                                Verify password<span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="password" id="txtver" name="txtver" 
+                                class="form-control" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{6-8})$"
+                                oninput='txtver.setCustomValidity(txtver.value!=txtpassword.value ? "password doesnt match" :"")'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtbirthday">
+                                Birthday<span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="date" id="txtbirthday" name="txtbirthday" 
+                                class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtapp">
+                                Appooniment<span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="time" id="txtapp" name="txtapp" 
+                                class="form-control">
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <input type="submit" value="send" class="btn  btn-primary vtn-lg" onclick="getData()">
+                        </td>
+                        <td>
+                            <input type="reset" value="clear" class="btn  btn-primary vtn-lg" onclick="getData()">
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
